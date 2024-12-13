@@ -1,0 +1,20 @@
+name: python script output
+on:
+    push:
+        branches:
+            - master
+jobs:
+    artifact:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download Code
+              uses: actions/checkout@v4
+            - name: run python script
+              run: python3 sample.py
+            - name: upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                name: result-file
+                path: result.txt
+                if-no-files-found: error
+          
