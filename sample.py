@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 def func(*args):
     result = str(sum(args))
-    print(result)
     with open('result.txt','w+') as my_file:
         my_file.write(result)
 

@@ -6,6 +6,8 @@ on:
 jobs:
     artifact:
         runs-on: ubuntu-latest
+        outputs:
+          result: ${{ steps.result.outputs.sum }}
         steps:
             - name: Download Code
               uses: actions/checkout@v4
@@ -17,4 +19,13 @@ jobs:
                 name: result-file
                 path: result.txt
                 if-no-files-found: error
+            - name: results output
+              id: result
+              run: echo "sum=$(cat result.txt)">>$GITHUB_OUTPUT
+    output:
+      needs: artifact
+      runs-on: ubuntu-latest
+      steps:
+        - name: output the sum of the numbers
+          run: echo ${{ needs.artifact.outputs.result }}
           
