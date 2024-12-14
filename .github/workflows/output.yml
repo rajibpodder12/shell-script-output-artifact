@@ -5,7 +5,10 @@ on:
             - master
 jobs:
     artifact:
-        runs-on: ubuntu-latest
+        strategy:
+          matrix:
+            operating-system: [ubuntu-latest,windows-latest]
+        runs-on: matrix.operating-system
         outputs:
           result: ${{ steps.result.outputs.sum }}
         steps:
