@@ -7,7 +7,7 @@ jobs:
     artifact:
         strategy:
           matrix:
-            operating-system: [ubuntu-latest,windows-latest]
+            operating-system: [ubuntu-latest]
         runs-on: matrix.operating-system
         outputs:
           result: ${{ steps.result.outputs.sum }}
