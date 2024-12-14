@@ -8,7 +8,7 @@ jobs:
         strategy:
           matrix:
             operating-system: [ubuntu-latest]
-        runs-on: matrix.operating-system
+        runs-on: ${{ matrix.operating-system }}
         outputs:
           result: ${{ steps.result.outputs.sum }}
         steps:
