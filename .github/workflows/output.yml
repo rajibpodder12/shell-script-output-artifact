@@ -25,7 +25,7 @@ jobs:
               # run: echo "::set-output name=sum::$(cat result.txt)"
     output:
       needs: artifact
-      if: ${{ needs.artifact.outputs.result == 56 }}
+      if: ${{ needs.artifact.outputs.result == 55 }}
       runs-on: ubuntu-latest
       steps:
         - name: output the sum of the numbers
