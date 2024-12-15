@@ -1,1 +1,1 @@
-![example branch parameter](https://github.com/github/docs/actions/workflows/output.yml/badge.svg?event=push)
+![example badge workflow](https://github.com/rajibpodder12/shell-script-output-artifact/actions/workflows/output.yml/badge.yml?event=push)
