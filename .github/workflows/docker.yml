@@ -1,0 +1,12 @@
+name: docker runtime
+on: [push,workflow_dispatch]
+jobs:
+    docker-runner:
+        runs-on: ubuntu-latest
+        container:
+            image: python:latest
+        steps:
+            - name: download github code
+              uses: actions/checkout@v4 
+            - name: execute python script
+              run: python sample.py
