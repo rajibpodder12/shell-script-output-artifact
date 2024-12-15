@@ -1,0 +1,1 @@
+![example branch parameter](https://github.com/github/docs/actions/workflows/output.yml/badge.svg?event=push)
